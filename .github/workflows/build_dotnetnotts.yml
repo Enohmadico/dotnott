@@ -1,27 +1,27 @@
-# name: Build - dotnetnotts
+name: Build - dotnetnotts
 
-# on: [pull_request]
+on: [pull_request]
 
-# jobs:
-#   build:
-#     runs-on: windows-latest
+jobs:
+  build:
+    runs-on: windows-latest
 
-#     steps:
-#     - uses: actions/checkout@v4
+    steps:
+    - uses: actions/checkout@v4
 
-#     - name: Set up dotnet
-#       uses: actions/setup-dotnet@v4
-#       with:
-#         dotnet-version: '8.0.x'
+    - name: Set up dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
 
-#     - name: Clean
-#       run: dotnet clean --configuration Release && dotnet nuget locals all --clear
+    - name: Clean
+      run: dotnet clean --configuration Release && dotnet nuget locals all --clear
       
-#     - name: Restore dependencies
-#       run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore
 
-#     - name: Build with dotnet
-#       run: dotnet build --configuration Release
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
 
-#     - name: Run tests
-#       run: dotnet test
+    - name: Run tests
+      run: dotnet test
