@@ -44,4 +44,4 @@ jobs:
       with:
         app-name: 'bush123'
         publish-profile: ${{ secrets.PRODUCTION_SECRET }}
-        package: \myapp
+        package: "."
