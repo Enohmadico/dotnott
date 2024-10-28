@@ -60,7 +60,7 @@ jobs:
         - name: Download Artifact   
           uses: actions/Download-artifact@v4
           with:
-            name: ${{env.DOTNET_ROOT}}/myapp
+            name: myapp
             path: it the path that the downloaded artifact will be kept 
         - name: Webdeploy step
           id: link
