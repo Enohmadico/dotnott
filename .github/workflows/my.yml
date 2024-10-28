@@ -57,10 +57,10 @@ jobs:
         url: ${{steps.link.outputs.webapp-url}}
       
       steps:
-        - name: Download Artifact
+        - name: Download Artifact   
           uses: actions/Download-artifact@v4
           with:
-            name: dotnet artifacts
+            name: dotnet-artifacts
             path: it the path that the downloaded artifact will be kept 
         - name: Webdeploy step
           id: link
