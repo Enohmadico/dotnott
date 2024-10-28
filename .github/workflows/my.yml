@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Step
         run: |
-          cd example-dotnet
+        
           dir
           dotnet build --configuration Debug 
 
