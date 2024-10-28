@@ -32,6 +32,11 @@ jobs:
 
     - name: dotnet publish
       run: dotnet publish dotnetnotts.csproj -c Release -o \myapp
+    - name: list files 
+      run: |
+         write-host "listing files"
+         dir 
+          
 
   deploy:
     needs: build-and-deploy
