@@ -64,7 +64,7 @@ jobs:
             path: it the path that the downloaded artifact will be kept 
         - name: Webdeploy step
           id: link
-          uses: azure/webapps-deploy@v2
+          uses: azure/webapps-deploy@v3
           with:
             app-name: ${{env.WEBAPP_NAME}}
             publish-profile: ${{ secrets.PRODUCTION_SECRET }}
