@@ -5,7 +5,7 @@ run-name: example-dotnet app
 on: 
   push:
     branches:
-      - DEV
+      - dev
   workflow_dispatch:
 
 env:
@@ -26,11 +26,11 @@ jobs:
       - name: Set Up .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "6.0.x"  
+          dotnet-version: "8.0.x"  
       - name: Install Dependencies
         run: |
           cd example-dotnet
-          dotnet restore .\example-dotnet.csproj
+          dotnet restore .\dotnetnotts.csproj
 
       - name: Build Step
         run: |
@@ -40,13 +40,13 @@ jobs:
 
       - name: Publish Step
         run: |
-          dotnet publish example-dotnet/example-dotnet.csproj -c Debug -o example-dotnet/publish
+          dotnet publish example-dotnet/example-dotnet.csproj -c Debug -o dotnetnotts.csproj/publish
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: exam-artifacts
-          path: example-dotnet/publish/**
+          path: dotnetnotts.csproj/publish/**
           if-no-files-found: error
   deploy:
       needs: build
