@@ -29,7 +29,7 @@ jobs:
           dotnet-version: "8.0.x"  
       - name: Install Dependencies
         run: |
-          cd example-dotnet
+          
           dotnet restore .\dotnetnotts.csproj
 
       - name: Build Step
