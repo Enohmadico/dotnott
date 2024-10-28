@@ -68,7 +68,7 @@ jobs:
           with:
             app-name: ${{env.WEBAPP_NAME}}
             publish-profile: ${{ secrets.PRODUCTION_SECRET }}
-            package: "./myapp"
+            package: "myapp"
 
         - name: display done  deploying in to azure 
           run : |
