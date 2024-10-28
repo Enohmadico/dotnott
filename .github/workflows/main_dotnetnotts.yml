@@ -2,8 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and Deploy to Azure Web App - dotnetnotts
-env:
-    dotnet_root
+
 
 on:
   push:
