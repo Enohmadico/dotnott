@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: exam-artifacts
-          path: dotnetnotts.csproj/publish/**
+          path: ./publish/**
           if-no-files-found: error
   deploy:
       needs: build
