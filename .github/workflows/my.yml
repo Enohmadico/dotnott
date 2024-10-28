@@ -1,6 +1,6 @@
 
-name: example-dotnet
-run-name: example-dotnet app
+name: dotnetnotts app 
+run-name: dotnetnotts
 
 on: 
   push:
