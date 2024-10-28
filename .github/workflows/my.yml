@@ -40,7 +40,7 @@ jobs:
 
       - name: Publish Step
         run: |
-          dotnet publish  dotnetnotts.csproj -c Debug -o ${{env.DOTNET_ROOT}}/myapp
+          dotnet publish  dotnetnotts.csproj -c Debug -o /myapp
 
 
       - name: Upload Artifacts
