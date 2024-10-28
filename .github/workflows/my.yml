@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Step
         run: |
-          write-Host"listing files after build"
+          write-Host "listing files after build"
           dir
           dotnet build --configuration Debug 
 
