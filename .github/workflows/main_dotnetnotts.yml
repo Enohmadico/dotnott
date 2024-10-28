@@ -3,7 +3,7 @@
 
 name: Build and Deploy to Azure Web App - dotnetnotts
 env:
-    dotnet_root:"."
+    dotnet_root
 
 on:
   push:
