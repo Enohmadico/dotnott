@@ -40,7 +40,7 @@ jobs:
 
       - name: Publish Step
         run: |
-          dotnet publish  dotnetnotts.csproj -c Debug -o ./publish
+          dotnet publish  dotnetnotts.csproj -c Debug -o ${{env.DOTNET_ROOT}}/myapp
 
 
       - name: Upload Artifacts
@@ -60,7 +60,7 @@ jobs:
         - name: Download Artifact   
           uses: actions/Download-artifact@v4
           with:
-            name: dotnet-artifacts
+            name: ${{env.DOTNET_ROOT}}/myapp
             path: it the path that the downloaded artifact will be kept 
         - name: Webdeploy step
           id: link
@@ -68,7 +68,7 @@ jobs:
           with:
             app-name: ${{env.WEBAPP_NAME}}
             publish-profile: ${{ secrets.PRODUCTION_SECRET }}
-            package: "./"
+            package: "${{env.DOTNET_ROOT}}/myapp"
 
         - name: display done  deploying in to azure 
           run : |
